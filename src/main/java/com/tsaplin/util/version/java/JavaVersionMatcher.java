@@ -12,7 +12,7 @@ public class JavaVersionMatcher {
 	 * 		>= 1.8 & < 1.9
 	 * 		>= 1.8 & < 1.9 & !(1.8.4_05 | 1.8.4_06)
 	 */
-	public static boolean matchJavaVersion(String javaVersion, String exp) {
+	public static boolean match(String javaVersion, String exp) {
 		return evaluateExpression(javaVersion, new StringTokenizer(exp.replaceAll("\\s+",""), "()|&!", true));
 	}
 	
